@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <h1 class="logo-title">👨‍💼 Employee Dashboard</h1>
+        </div>
+
+        <div class="search-box">
+            <input type="search" placeholder="Search Employees...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+    </header>
+    <main>
+        <aside class="sidebar">
+            <button id="homeBtn">Home</button>
+            <button id="addBtn">Add Employee</button>
+            <button id="showBtn">Show Employees</button>
+            <button id="filterBtn">Filter Employees</button>
+            <button id="deleteBtn">Delete Employee</button>
+        </aside>
+        <section class="content">
+            <div class="home-section">
+                <div class="home-text">
+                    <h2>Welcome to Employee Dashboard!</h2>
+                    <p>Manage employee information quickly and efficiently.
+                        Use the sidebar to add, view, filter, search,
+                        and delete employee records.</p>
+                </div>
+                <div class="home-image"><img src="dashboard.jpg"></div>
+            </div>
+            <div class="add-section">
+                <h2>Add New Employee!!</h2>
+                <form class="employee-form">
+                    <div class="form-group">
+                        <label for="employeename">Name</label>
+                        <input type="text" id="employeename" placeholder="Enter employee name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employeerole">Role</label>
+                        <input type="text" id="employeerole" placeholder="e.g. Manager, Developer, Designer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employeedepartment">Department</label>
+                        <select id="employeedepartment" required>
+                            <option value="">Select Department</option>
+                            <option value="HR">HR</option>
+                            <option value="IT">IT</option>
+                            <option value="FINANCE">Finance</option>
+                            <option value="MARKETING">Marketing</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Administration">Administration</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="employeesalary">Salary (Rs.)</label>
+                        <input type="number" id="employeesalary" placeholder="Enter salary" required>
+                    </div>
+                    <button type="submit" id="addemployeebtn">
+                        Add Employee
+                    </button>
+                </form>
+            </div>
+            <div class="show-section">
+                <h2>All Employees</h2>
+                <div id="employeeList">
+                </div>
+            </div>
+            <div class="filter-section">
+
+                <h2>Filter Employees</h2>
+
+                <div class="filter-box">
+
+                    <label for="filterDepartment">Select Department</label>
+
+                    <select id="filterDepartment">
+                        <option value="">Choose Department</option>
+                        <option value="HR">HR</option>
+                        <option value="IT">IT</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Administration">Administration</option>
+                    </select>
+
+                    <button id="filterEmployeeBtn">
+                        Filter Employees
+                    </button>
+
+                </div>
+
+            </div>
+            
+            <div class="delete-section">
+
+                <h2>Delete Employee</h2>
+
+                <div id="deleteEmployeeList">
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="srcipt.js"></script>
+</body>
+
+</html>
